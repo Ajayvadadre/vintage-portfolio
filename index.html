@@ -109,7 +109,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
             font-family: 'JetBrains Mono', monospace;
         }
 
@@ -357,10 +358,30 @@
         }
 
         .home-icon {
-            width: clamp(72px, 9vw, 128px);
-            height: clamp(72px, 9vw, 128px);
-        }
+    width: 90px;
+    height: 90px;
+}
 
+@media (min-width: 375px) {
+    .home-icon {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media (min-width: 430px) {
+    .home-icon {
+        width: 135px;
+        height: 135px;
+    }
+}
+
+@media (min-width: 768px) {
+    .home-icon {
+        width: 128px;
+        height: 128px;
+    }
+}
         .contact-form-wrap {
             width: min(100%, 680px);
             margin: 0 auto;
@@ -766,18 +787,18 @@
                     <div
                         class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2 md:mb-8 gap-2 md:gap-0">
                         <span
-                            class="cursor-pointer px-2 md:px-6 py-1 md:py-2 transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                            class="cursor-pointer text-xs md:text-base font-headline-md font-bold uppercase px-3 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white    "
                             onclick="navigate('home')">&lt; BACK</span>
                         <div
                             class="flex flex-wrap gap-2 md:gap-8 text-xs md:text-base font-headline-md font-bold uppercase">
                             <span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('projects')">PROJECTS</span><span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('about')">ABOUT</span><span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('experience')">EXPERIENCE</span><span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('contact')">CONTACT</span>
                         </div>
                     </div>
@@ -827,18 +848,18 @@
                     <div
                         class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2 md:mb-8 gap-2 md:gap-0">
                         <span
-                            class="cursor-pointer text-xs md:text-base font-headline-md font-bold uppercase px-3 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                            class="cursor-pointer text-xs md:text-base font-headline-md font-bold uppercase px-3 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                             onclick="navigate('home')">&lt; BACK</span>
                         <div
                             class="flex flex-wrap gap-2 md:gap-8 text-xs md:text-base font-headline-md font-bold uppercase">
                             <span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('projects')">PROJECTS</span><span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('about')">ABOUT</span><span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('experience')">EXPERIENCE</span><span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('contact')">CONTACT</span>
                         </div>
                     </div>
@@ -878,18 +899,18 @@
                     <div
                         class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2 md:mb-8 text-inherit gap-2 md:gap-0">
                         <span
-                            class="cursor-pointer text-xs md:text-base font-headline-md font-bold uppercase px-3 md:px-6 py-1 md:py-2      transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                            class="cursor-pointer text-xs md:text-base font-headline-md font-bold uppercase px-3 md:px-6 py-1 md:py-2      transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                             onclick="navigate('home')">&lt; BACK</span>
                         <div
                             class="flex flex-wrap gap-2 md:gap-8 text-xs md:text-base font-headline-md font-bold uppercase">
                             <span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2      transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2      transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('projects')">PROJECTS</span><span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2      transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2      transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('about')">ABOUT</span><span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2      transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2      transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('experience')">EXPERIENCE</span><span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2      transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2      transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('contact')">CONTACT</span>
                         </div>
                     </div>
@@ -940,18 +961,18 @@
                     <div
                         class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2 md:mb-8 gap-2 md:gap-0">
                         <span
-                            class="cursor-pointer text-xs md:text-base font-headline-md font-bold uppercase px-3 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                            class="cursor-pointer text-xs md:text-base font-headline-md font-bold uppercase px-3 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                             onclick="navigate('home')">&lt; BACK</span>
                         <div
                             class="flex flex-wrap gap-2 md:gap-8 text-xs md:text-base font-headline-md font-bold uppercase">
                             <span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('projects')">PROJECTS</span><span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('about')">ABOUT</span><span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('experience')">EXPERIENCE</span><span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('contact')">CONTACT</span>
                         </div>
                     </div>
@@ -982,18 +1003,18 @@
                     <div
                         class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2 md:mb-8 gap-2 md:gap-0">
                         <span
-                            class="cursor-pointer text-xs md:text-base font-headline-md font-bold uppercase px-3 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                            class="cursor-pointer text-xs md:text-base font-headline-md font-bold uppercase px-3 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                             onclick="navigate('contact')">&lt; BACK</span>
                         <div
                             class="flex flex-wrap gap-2 md:gap-8 text-xs md:text-base font-headline-md font-bold uppercase">
                             <span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('projects')">PROJECTS</span><span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('about')">ABOUT</span><span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('experience')">EXPERIENCE</span><span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white border-2 border-white"
+                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('contact')">CONTACT</span>
                         </div>
                     </div>
