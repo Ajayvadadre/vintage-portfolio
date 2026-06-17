@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en" style="width: 100%; height: 100%; overflow: hidden; position: relative;">
+<html class="dark" lang="en" style="width: 100%; min-height: 100dvh; overflow: hidden; position: relative;">
 
 <head>
     <meta charset="utf-8" />
@@ -104,7 +104,7 @@
             background-color: #000;
             color: #fff;
             margin: 0;
-            height: 100vh;
+            height: 100dvh;
             width: 100vw;
             display: flex;
             justify-content: center;
@@ -115,7 +115,7 @@
 
         .crt-container {
             width: 100%;
-            height: 100vh;
+            height: 100dvh;
             position: relative;
             display: flex;
             justify-content: center;
@@ -181,7 +181,7 @@
         @media (max-width: 767px) {
             .crt-content {
                 padding: 24px 18px;
-                overflow-y: auto;
+                overflow-y: hidden;
             }
         }
 
@@ -538,15 +538,17 @@
             .about-copy {
                 gap: 16px;
             }
+.about-profile-card {
+        min-height: auto;   /* Removes the rigid 34vh height constraint */
+        padding: 24px 16px; /* Gives the card clean internal spacing */
+        flex-shrink: 0;     /* Prevents flexbox from squeezing this card */
+    }
 
-            .about-profile-card {
-                min-height: 34vh;
-            }
-
-            .about-profile-frame {
-                width: min(78vw, 40vh);
-                min-width: 220px;
-            }
+    .about-profile-frame {
+        width: 220px;       /* Sets a safe, uniform square width for mobile devices */
+        height: 220px;      /* Matches the width precisely */
+        max-width: 100%;    /* Ensures it never breaks small viewports */
+    }
         }
 
         /* 2. Hover States for Experience Cards */
@@ -864,8 +866,7 @@
                                 onclick="navigate('contact')">CONTACT</span>
                         </div>
                     </div>
-                    <div class="flex flex-col-reverse md:flex-row gap-4 pt-2 md:pt-4 border-t-2 border-black">
-                        <div class="w-full md:w-1/2 retro-card md:h-[80%] md:overflow-y-auto mt-0 md:mt-4">
+<div class="flex-1 overflow-y-auto md:overflow-visible flex flex-col-reverse md:flex-row gap-4 pt-2 md:pt-4 border-t-2 border-black pr-2 pb-6">                        <div class="w-full md:w-1/2 retro-card md:h-[80%] md:overflow-y-auto mt-0 md:mt-4">
                             <div class="font-headline-md text-sm md:text-xl font-bold mb-1">AJAY VADADRE</div>
                             <div class="about-copy font-body-md text-xs md:text-base flex flex-col">
                                 <p class="font-bold">ABOUT ME:</p>
@@ -978,7 +979,7 @@
                         </div>
                     </div>
                     <div
-                        class="flex-1 flex flex-col items-center justify-start md:justify-center text-center border-t-2 border-black pt-2 md:pt-8">
+                        class="flex-1 flex flex-col items-center justify-center md:justify-center text-center border-t-2 border-black pt-2 md:pt-8">
                         <div class="font-headline-lg text-lg md:text-3xl font-bold mb-4 md:mb-8">INITIALIZE CONTACT
                             SEQUENCE</div>
                         <div class="retro-card w-full max-w-md">
