@@ -855,9 +855,11 @@
                                 <div class="flex flex-col justify-between flex-1 md:order-1 md:pr-8">
 
                                     <p class="font-body-md max-w-full md:max-w-[90%] md:text-base text-sm">
-                                        A full-stack application for scheduling reports to AWS and SFTP with real-time delivery updates. 
-                                        Built using Node.js, React, Cron and Redis. Users can configure recurring schedules,
-                                        monitor delivery status, and automate report distribution, 
+                                        A full-stack application for scheduling reports to AWS and SFTP with real-time
+                                        delivery updates.
+                                        Built using Node.js, React, Cron and Redis. Users can configure recurring
+                                        schedules,
+                                        monitor delivery status, and automate report distribution,
                                         reducing manual effort and improving operational efficiency.
                                     </p>
 
@@ -933,7 +935,7 @@
                             class="cursor-pointer text-xs md:text-base font-headline-md font-bold uppercase px-3 md:px-6 py-2 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                             onclick="navigate('home')">&lt; BACK</span>
                         <div
-                            class="flex flex-wrap gap-2 md:gap-8 text-xs md:text-base font-headline-md font-bold uppercase">
+                            class="flex flex-wrap gap-2 md:gap-6 text-xs md:text-base font-headline-md font-bold uppercase">
                             <span
                                 class="cursor-pointer px-3 md:px-6 py-2 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('projects')">PROJECTS</span><span
@@ -985,7 +987,7 @@
                             class="cursor-pointer text-xs md:text-base font-headline-md font-bold uppercase px-3 md:px-6 py-2 md:py-2      transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                             onclick="navigate('home')">&lt; BACK</span>
                         <div
-                            class="flex flex-wrap gap-2 md:gap-8 text-xs md:text-base font-headline-md font-bold uppercase">
+                            class="flex flex-wrap gap-2 md:gap-6 text-xs md:text-base font-headline-md font-bold uppercase">
                             <span
                                 class="cursor-pointer px-3 md:px-6 py-2 md:py-2      transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('projects')">PROJECTS</span><span
@@ -1047,7 +1049,7 @@
                             class="cursor-pointer text-xs md:text-base font-headline-md font-bold uppercase px-3 md:px-6 py-2 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                             onclick="navigate('home')">&lt; BACK</span>
                         <div
-                            class="flex flex-wrap gap-2 md:gap-8 text-xs md:text-base font-headline-md font-bold uppercase">
+                            class="flex flex-wrap gap-2 md:gap-6 text-xs md:text-base font-headline-md font-bold uppercase">
                             <span
                                 class="cursor-pointer px-3 md:px-6 py-2 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('projects')">PROJECTS</span><span
@@ -1089,7 +1091,7 @@
                             class="cursor-pointer text-xs md:text-base font-headline-md font-bold uppercase px-3 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                             onclick="navigate('contact')">&lt; BACK</span>
                         <div
-                            class="flex flex-wrap gap-2 md:gap-8 text-xs md:text-base font-headline-md font-bold uppercase">
+                            class="flex flex-wrap gap-2 md:gap-6 text-xs md:text-base font-headline-md font-bold uppercase">
                             <span
                                 class="cursor-pointer px-3 md:px-6 py-2 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
                                 onclick="navigate('projects')">PROJECTS</span><span
@@ -1129,6 +1131,18 @@
         </div>
     </div>
     <script>
+
+        //click-logic
+        const clickSound = new Audio("./images/click-sound.mp3");
+        clickSound.volume = 1;
+
+        document.querySelectorAll("[onclick], .retro-button").forEach(element => {
+            element.addEventListener("click", () => {
+                clickSound.currentTime = 0;
+                clickSound.play();
+            });
+        });
+
         // Simple navigation logic
         function navigate(viewId) {
             // Hide all views
