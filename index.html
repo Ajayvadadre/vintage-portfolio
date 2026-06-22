@@ -538,17 +538,24 @@
             .about-copy {
                 gap: 16px;
             }
-.about-profile-card {
-        min-height: auto;   /* Removes the rigid 34vh height constraint */
-        padding: 24px 16px; /* Gives the card clean internal spacing */
-        flex-shrink: 0;     /* Prevents flexbox from squeezing this card */
-    }
 
-    .about-profile-frame {
-        width: 220px;       /* Sets a safe, uniform square width for mobile devices */
-        height: 220px;      /* Matches the width precisely */
-        max-width: 100%;    /* Ensures it never breaks small viewports */
-    }
+            .about-profile-card {
+                min-height: auto;
+                /* Removes the rigid 34vh height constraint */
+                padding: 24px 16px;
+                /* Gives the card clean internal spacing */
+                flex-shrink: 0;
+                /* Prevents flexbox from squeezing this card */
+            }
+
+            .about-profile-frame {
+                width: 220px;
+                /* Sets a safe, uniform square width for mobile devices */
+                height: 220px;
+                /* Matches the width precisely */
+                max-width: 100%;
+                /* Ensures it never breaks small viewports */
+            }
         }
 
         /* 2. Hover States for Experience Cards */
@@ -787,64 +794,135 @@
                 </div>
                 <!-- 3. Projects Section -->
                 <div class="view-section" id="view-projects">
+
+                    <!-- Header -->
                     <div
-                        class="flex flex-col md:flex-row justify-between items-start md:items-center mb-2 md:mb-8 gap-2 md:gap-0">
+                        class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 md:mb-8 gap-3 md:gap-0">
+
                         <span
-                            class="cursor-pointer text-xs md:text-base font-headline-md font-bold uppercase px-3 md:px-6 py-1 md:py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white    "
-                            onclick="navigate('home')">&lt; BACK</span>
+                            class="cursor-pointer text-xs md:text-base font-headline-md font-bold uppercase px-3 md:px-6 py-2 hover:bg-black hover:text-white transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white"
+                            onclick="navigate('home')">
+                            &lt; BACK
+                        </span>
+
                         <div
-                            class="flex flex-wrap gap-2 md:gap-8 text-xs md:text-base font-headline-md font-bold uppercase">
+                            class="flex flex-wrap gap-2 md:gap-6 text-xs md:text-base font-headline-md font-bold uppercase">
+
                             <span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
-                                onclick="navigate('projects')">PROJECTS</span><span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
-                                onclick="navigate('about')">ABOUT</span><span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
-                                onclick="navigate('experience')">EXPERIENCE</span><span
-                                class="cursor-pointer px-2 md:px-6 py-1 md:py-2 transition-all duration-150 ease-in-out active:scale-95 rounded bg-black text-white  "
-                                onclick="navigate('contact')">CONTACT</span>
+                                class="cursor-pointer px-3 md:px-6 py-2 rounded bg-black text-white transition-all duration-150 ease-in-out active:scale-95"
+                                onclick="navigate('projects')">
+                                PROJECTS
+                            </span>
+
+                            <span
+                                class="cursor-pointer px-3 md:px-6 py-2 rounded bg-black text-white transition-all duration-150 ease-in-out active:scale-95"
+                                onclick="navigate('about')">
+                                ABOUT
+                            </span>
+
+                            <span
+                                class="cursor-pointer px-3 md:px-6 py-2 rounded bg-black text-white transition-all duration-150 ease-in-out active:scale-95"
+                                onclick="navigate('experience')">
+                                EXPERIENCE
+                            </span>
+
+                            <span
+                                class="cursor-pointer px-3 md:px-6 py-2 rounded bg-black text-white transition-all duration-150 ease-in-out active:scale-95"
+                                onclick="navigate('contact')">
+                                CONTACT
+                            </span>
+
                         </div>
                     </div>
-                    <div class="flex-1 overflow-y-auto pr-2 md:pr-4 border-r-0 md:border-r-2 border-black">
 
-                        <!-- Project 1 -->
-                        <div class="retro-card">
-                            <div class="font-headline-md text-sm md:text-xl font-bold mb-2">Report scheduler</div>
-                            <div
-                                class="h-24 md:h-40 bg-black text-white flex items-center justify-center mb-4 overflow-hidden relative">
-                                <img class="" src="./images/scheduler.png" alt="">
-                                <!-- <span
-                                    class="material-symbols-outlined text-4xl md:text-6xl opacity-50 absolute">article</span>
-                                <span class="font-body-md text-xs md:text-base z-10">IMAGE_PLACEHOLDER</span> -->
+                    <!-- Scroll Area -->
+                    <div class="flex-1 overflow-y-auto pr-1 md:pr-4 md:border-r-2 border-black space-y-6">
+
+                        <!-- ========================= -->
+                        <!-- PROJECT 1 -->
+                        <!-- ========================= -->
+
+                        <div class="retro-card p-4 md:p-6">
+
+                            <h2 class="font-headline-md text-xl md:text-3xl font-bold mb-4 tracking-wide">
+                                Report Scheduler
+                            </h2>
+
+                            <div class="flex flex-col-reverse md:flex-row gap-6 md:gap-8">
+
+                                <!-- Description + Button -->
+                                <div class="flex flex-col justify-between flex-1 md:order-1 md:pr-8">
+
+                                    <p class="font-body-md leading-relaxed max-w-full md:max-w-[90%]">
+                                        A full-stack application for scheduling reports to AWS and SFTP with real-time delivery updates. 
+                                        Built using Node.js, React, Cron and Redis. Users can configure recurring schedules,
+                                        monitor delivery status, and automate report distribution, 
+                                        reducing manual effort and improving operational efficiency.
+                                    </p>
+
+                                    <a class="retro-button text-xs md:text-sm w-full md:w-fit text-center mt-6"
+                                        href="https://github.com/Ajayvadadre/reportScheduler" target="_blank">
+                                        [SHOW PROJECT]
+                                    </a>
+
+                                </div>
+
+                                <!-- Image -->
+                                <div class="w-full md:w-[40%] flex items-center justify-center md:order-2">
+                                    <img src="./images/scheduler.png" alt="Report Scheduler"
+                                        class="w-full max-h-[280px] object-contain"
+                                        style="mix-blend-mode: luminosity;" />
+                                </div>
+
                             </div>
-                            <p class="font-body-md text-xs md:text-base mb-4">A full-stack app to schedule reports to
-                                AWS and SFTP seamless delivering
-                                real-time updates, built with Node.js, React, cron, redis.</p>
-                            <a class="retro-button text-xs md:text-sm"
-                                href="https://github.com/Ajayvadadre/reportScheduler">[
-                                VIEW PROJECT ]</a>
+
                         </div>
-                        <!-- Project 2 -->
-                        <div class="retro-card">
-                            <div class="font-headline-md text-sm md:text-xl font-bold mb-2">ShoesDekh</div>
-                            <div
-                                class="h-24 md:h-40 bg-black text-white flex items-center justify-center mb-4 overflow-hidden relative">
-                                <img style=" mix-blend-mode: luminosity;" src="./images/shoesdekhProject.png" alt="">
-                                <!-- <span
-                                    class="material-symbols-outlined text-4xl md:text-6xl opacity-50 absolute">article</span>
-                                <span class="font-body-md text-xs md:text-base z-10">IMAGE_PLACEHOLDER</span> -->
+
+                        <!-- ========================= -->
+                        <!-- PROJECT 2 -->
+                        <!-- ========================= -->
+
+                        <div class="retro-card p-4 md:p-6">
+
+                            <h2 class="font-headline-md text-xl md:text-3xl font-bold mb-4 tracking-wide">
+                                ShoesDekh
+                            </h2>
+
+                            <div class="flex flex-col-reverse md:flex-row gap-6 md:gap-8">
+
+                                <div class="flex flex-col justify-between flex-1">
+
+                                    <p class="font-body-md leading-relaxed max-w-full md:max-w-[90%] md:pr-8">
+                                        An e-commerce platform for sneaker enthusiasts featuring
+                                        product browsing, modern UI design and responsive shopping
+                                        experiences built with React and modern web technologies.
+                                    </p>
+
+                                    <a class="retro-button text-xs md:text-sm w-full md:w-fit text-center mt-6"
+                                        href="https://github.com/Ajayvadadre/Shoesdekh" target="_blank">
+                                        [SHOW PROJECT]
+                                    </a>
+
+                                </div>
+
+                                <div class="w-full md:w-[40%] flex items-center justify-center">
+                                    <img src="./images/shoesdekhProject.png" alt="ShoesDekh"
+                                        class="w-full max-h-[280px] object-contain"
+                                        style="mix-blend-mode: luminosity;" />
+                                </div>
+
                             </div>
-                            <p class="font-body-md text-xs md:text-base mb-4">A modern e-commerce platform built with
-                                Next.js and MongoDB, offering a sleek shopping experience for footwear enthusiasts.</p>
-                            <a class="retro-button text-xs md:text-sm" href="https://github.com/Ajayvadadre/Shoesdekh">[
-                                VIEW PROJECT ]</a>
+
                         </div>
 
                     </div>
+
+                    <!-- Footer -->
                     <div
                         class="text-center font-label-sm text-[10px] md:text-xs font-bold mt-4 pt-2 border-t-2 border-black">
                         SCROLL FOR MORE PROJECTS
                     </div>
+
                 </div>
                 <!-- 4. About Section -->
                 <div class="view-section" id="view-about">
@@ -866,7 +944,9 @@
                                 onclick="navigate('contact')">CONTACT</span>
                         </div>
                     </div>
-<div class="flex-1 overflow-y-auto md:overflow-visible flex flex-col-reverse md:flex-row gap-4 pt-2 md:pt-4 border-t-2 border-black pr-2 pb-6">                        <div class="w-full md:w-1/2 retro-card md:h-[80%] md:overflow-y-auto mt-0 md:mt-4">
+                    <div
+                        class="flex-1 overflow-y-auto md:overflow-visible flex flex-col-reverse md:flex-row gap-4 pt-2 md:pt-4 border-t-2 border-black pr-2 pb-6">
+                        <div class="w-full md:w-1/2 retro-card md:h-[80%] md:overflow-y-auto mt-0 md:mt-4">
                             <div class="font-headline-md text-sm md:text-xl font-bold mb-1">AJAY VADADRE</div>
                             <div class="about-copy font-body-md text-xs md:text-base flex flex-col">
                                 <p class="font-bold">ABOUT ME:</p>
@@ -1119,7 +1199,7 @@
                     }, 500); // Brief pause before showing home
                 }
             }, 180); // Speed of loading bar
-
+            navigate('home');
 
             const contactEmailForm = document.getElementById('contact-email-form');
             if (contactEmailForm) {
